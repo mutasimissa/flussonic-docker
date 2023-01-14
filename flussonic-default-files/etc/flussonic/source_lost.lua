@@ -1,3 +1,6 @@
+-- Copyrights reserved to flussonic.com
+-- Sample code bootstrabed by flussonic streaming server
+
 if not new_dead_streams then
     new_dead_streams = {}
 end
