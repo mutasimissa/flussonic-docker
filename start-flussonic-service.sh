@@ -6,5 +6,5 @@ mkdir -p /flussonic/etc/flussonic &&
         --name flussonic \
         --hostname flussonic \
         -p 5000:80 \
-        -v /flussonic/etc/flussonic:/etc/flussonic:rw \
+        -v /flussonic/etc/flussonic:/etc/flussonic \
         flussonic/flussonic
