@@ -3,13 +3,13 @@ flussonicBaseDir="/flussonic-files"
 flussonicEtcDir="$flussonicBaseDir/etc/flussonic"
 flussonicVarDir="$flussonicBaseDir/var/lib/flussonic"
 dockerHubImage="flussonic/flussonic"
-if [ -d "$flussonicEtcDir" ]; then
+if ! [ -d "$flussonicEtcDir" ]; then
     echo "didn't find $flussonicEtcDir , creating default /etc/flussonic configuration ..."
     mkdir -p "$flussonicEtcDir"
     rsync -avu --delete "$(pwd)/flussonic-default-files/etc/" "$flussonicBaseDir/etc"
 fi
 
-if [ -d "$flussonicVarDir" ]; then
+if ! [ -d "$flussonicVarDir" ]; then
     echo "didn't find $flussonicVarDir , creating required /var/lib/flussonic paths ..."
     mkdir -p "$flussonicVarDir"
 fi
