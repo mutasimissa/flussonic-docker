@@ -4,7 +4,7 @@ flussonicVarDir="/flussonic/var/lib/flussonic"
 if [ -d "$flussonicEtcDir" ]; then
     echo "didn't find $flussonicEtcDir , creating default /etc/flussonic configuration ..."
     mkdir -p "$flussonicEtcDir"
-    cp -r "$(pwd)/flussonic-default-files/etc"
+    cp -r "$(pwd)/flussonic-default-files/etc/flussonic/*" "$flussonicEtcDir"
 fi
 
 if [ -d "$flussonicVarDir" ]; then
