@@ -23,4 +23,4 @@ sh start-flussonic-container.sh
 - stop the container `docker stop flussonic`
 - restart the container `docker restart flussonic`
 - remove the container `docker stop flussonic && docker rm flussonic`
-- flussonic files will be presisted on the host at /flussonic-files  
+- flussonic files will be presisted on the host at `/flussonic-files`
